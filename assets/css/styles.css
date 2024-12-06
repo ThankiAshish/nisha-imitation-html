@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --color-primary: #dbb462;
+  --color-secondary: #f9f9fb;
+  --color-background: #eff3f4;
+  --color-white: #ffffff;
+  --color-text: #0e130f;
+  --color-text-transparent: rgba(14, 19, 15, 0.4);
+  --color-primary-light: rgba(219, 180, 98, 0.5);
+  --color-success: #189032;
+  --color-success-light: #beffc3;
+  --color-danger: #901818;
+  --color-danger-light: #ffbebe;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.text-light {
+  color: var(--color-text-transparent);
+}
+
+.icon-round {
+  background-color: var(--color-background);
+  padding: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-round svg {
+  color: var(--color-text);
+  font-size: 1.2rem;
+}
+
+.icon {
+  background-color: var(--color-background);
+  border-radius: 10px;
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.icon svg,
+.icon p {
+  font-size: 0.8rem;
+}
+
+.icon.success {
+  background-color: var(--color-success-light);
+}
+
+.icon.success svg,
+.icon.success p {
+  color: var(--color-success);
+}
+
+.icon.danger {
+  background-color: var(--color-danger-light);
+}
+
+.icon.danger svg,
+.icon.danger p {
+  color: var(--color-danger);
+}
+
+.sidebar {
+  background-color: var(--color-white);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
+  width: 300px;
+}
+
+.sidebar img {
+  width: 100px;
+}
+
+.sidebar-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.sidebar-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar a {
+  color: var(--color-text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease-in;
+}
+
+.sidebar a.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.sidebar a:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.dashboard {
+  flex: 1;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 1fr;
+  gap: 2rem;
+}
+
+.dashboard-header {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.dashboard-header p {
+  font-size: 0.875rem;
+  color: var(--color-text);
+}
+
+.dashboard-header .page-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-header .user {
+  background-color: var(--color-white);
+  border-radius: 100px;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.dashboard-header .user img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.cards {
+  grid-column: 1 / -1;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: var(--color-secondary);
+}
+
+.card.hover {
+  background-color: var(--color-primary-light);
+}
+
+.card.hover .icon-round svg {
+  color: var(--color-primary);
+}
+
+.card .card-title,
+.card .card-description {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.card .card-title h3 {
+  font-weight: 400;
+}
+
+.card .card-description .text-light {
+  font-size: 0.8rem;
+}
